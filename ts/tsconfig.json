@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "strict": true,
+        "module": "es2015",
+        "removeComments": true,
+        "sourceMap": false,
+        "outDir": "output"
+    },
+    "include": ["test2"],
+    "exclude": ["history","output"]
+}
