@@ -6,3 +6,5 @@ console.log(demo_2_1.default({
     lastName: '成林',
     age: 123,
 }));
+const str = '1234555';
+console.log(str.search(/5{3}/));

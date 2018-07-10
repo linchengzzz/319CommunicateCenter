@@ -1,3 +1,4 @@
+"use strict";
 var Student = (function () {
     function Student(firstName, lastName, age) {
         this.firstName = firstName;
