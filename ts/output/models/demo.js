@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var Demo = (function () {
     function Demo(a, b) {
         this.a = a;
@@ -10,4 +8,4 @@ var Demo = (function () {
     };
     return Demo;
 }());
-exports.Demo = Demo;
+export { Demo };

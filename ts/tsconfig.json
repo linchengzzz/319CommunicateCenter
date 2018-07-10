@@ -7,6 +7,6 @@
         "sourceMap": false,
         "outDir": "output"
     },
-    "include": ["test2"],
+    "include": ["test"],
     "exclude": ["history","output"]
 }
