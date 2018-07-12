@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            width: 300px;
+        }
+
+        .title {
+            background: #fff;
+            width: 100%;
+            position: sticky;
+            top: 20px;
+            height: 30px;
+            line-height: 30px;
+            text-align: left;
+            color: #333;
+            font-size: 30px;
+        }
+
+        .content {
+            height: 500px;
+            width: 100%;
+            background: #00cc66;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <div class="title">1</div>
+            <div class="content"></div>
+        </div>
+        <div class="box">
+            <div class="title">2</div>
+            <div class="content"></div>
+        </div>
+        <div class="box">
+            <div class="title">3</div>
+            <div class="content"></div>
+        </div>
+        <div class="box">
+            <div class="title">4</div>
+            <div class="content"></div>
+        </div>
+        <div class="box">
+            <div class="title">5</div>
+            <div class="content"></div>
+        </div>
+    </div>
+</body>
+<script>
+    var header = document.querySelector('.header');
+    var origOffsetY = header.offsetTop;
+    function onScroll(e) {
+        window.scrollY >= origOffsetY ? header.classList.add('sticky') :
+            header.classList.remove('sticky');
+    }
+    document.addEventListener('scroll', onScroll);
+</script>
+
+</html>

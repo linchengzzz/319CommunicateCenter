@@ -192,22 +192,22 @@
 // cont.reset();
 // console.log(cont);
 // extends class
-class Control {
-    private state: any;
+// class Control {
+//     private state: any;
     
-}
-interface SelectableControl extends Control {
-    select(): void;
-}
-// 只有control 的子类在可以实现selectableControl接口
-class Button extends Control implements SelectableControl {
-    select(){};
-    constructor(){
-        super();
-    }
-}
-class TextBox extends Control {
-}
-class Images implements SelectableControl {
-    select(){};
-}
+// }
+// interface SelectableControl extends Control {
+//     select(): void;
+// }
+// // 只有control 的子类在可以实现selectableControl接口
+// class Button extends Control implements SelectableControl {
+//     select(){};
+//     constructor(){
+//         super();
+//     }
+// }
+// class TextBox extends Control {
+// }
+// class Images implements SelectableControl {
+//     select(){};
+// }
