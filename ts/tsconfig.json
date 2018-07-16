@@ -5,7 +5,8 @@
         "module": "es2015",
         "removeComments": true,
         "sourceMap": false,
-        "outDir": "output"
+        "outDir": "output",
+        "experimentalDecorators": true
     },
     "include": ["test"],
     "exclude": ["history","output"]
