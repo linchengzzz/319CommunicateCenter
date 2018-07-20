@@ -27,13 +27,13 @@ git version 2.16.2
 > 初次安装git工具需要进行全局配置，用来在团队开发时，大家能知道你是谁
 
 ```bash
-git config --global user.name "你的github用户名"    
-git config --global user.email "你的github邮箱"
+git config --global user.name "你的git用户名"    
+git config --global user.email "你的git邮箱"
 # 查看git配置
 git config --global user.name   
 git config --global user.email 
 # 查看git全部配置
-git --list
+git config --list
 ```
 
 ## 4 github 注册
