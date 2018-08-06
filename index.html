@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100vw;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      p{
+        width: 100px;
+        height: 30px;
+        font-size: 24px;
+        background: #ccc;
+        color: #ccaf6f;
+        margin-top: 200px;
+      }
+    </style>
+</head>
+<body>
+    <div class="box">
+      <p class="text1">1</p>
+      <p class="text2">2</p>
+      <p class="text3">3</p>
+      <p class="text4">4</p>
+      <p class="text5">5</p>
+    </div>
+    <script type="text/javascript">
+    var $ = document.querySelector.bind(document);
+    document.ontouchend = () => {
+      $('.text2').scrollIntoViewIfNeeded();
+    }
+    </script>
+</body>
+</html>
