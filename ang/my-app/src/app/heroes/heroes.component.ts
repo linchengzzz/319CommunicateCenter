@@ -9,14 +9,10 @@ import { Hero } from '../hero';
 })
 export class HeroesComponent implements OnInit {
     public heroes: Hero[];
-    public selectedHero: Hero;
     // 依赖注入
     constructor(private heroService: HeroService) {}
     ngOnInit(): void {
         this.getHeroes();
-    }
-    onSelect(hero: Hero): void {
-        this.selectedHero = hero;
     }
     // 初始列表化数据
     getHeroes(): void {
