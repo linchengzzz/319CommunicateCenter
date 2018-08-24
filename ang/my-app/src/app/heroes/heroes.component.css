@@ -45,10 +45,13 @@
 }
 
 .heroes a {
+    width: 6em;
     color: #888;
     text-decoration: none;
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .heroes a:hover {
@@ -68,4 +71,11 @@
     height: 1.8em;
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
+}
+
+button.delete {
+    position: relative;
+    left: 20em;
+    background-color: gray !important;
+    color: white;
 }

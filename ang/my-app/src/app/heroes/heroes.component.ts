@@ -15,9 +15,21 @@ export class HeroesComponent implements OnInit {
         this.getHeroes();
     }
     // 初始列表化数据
-    getHeroes(): void {
+    private getHeroes(): void {
         this.heroService
             .getHeroes()
             .subscribe((heroes: Hero[]) => (this.heroes = heroes));
+    }
+    public add(name: string): void {
+        name = name.trim();
+        if (name) {
+            this.heroService
+                .addHero({ name } as Hero)
+                .subscribe((hero: Hero) => this.heroes.push(hero));
+        }
+    }
+    public delete(hero: Hero): void {
+        this.heroes = this.heroes.filter((h: Hero) => h !== hero);
+        this.heroService.deleteHero(hero).subscribe();
     }
 }
