@@ -1,6 +1,7 @@
 import { HeroService } from './../hero.service';
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
+import {overrideComponentView} from '../../../node_modules/@angular/core/src/view';
 
 @Component({
     selector: 'app-heroes',

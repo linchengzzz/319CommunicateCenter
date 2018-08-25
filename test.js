@@ -125,3 +125,8 @@ var person = {
     }
 }
 typeof person // => object
+
+const reg = /\?id=(\d+)/
+console.log(
+    reg.exec('http://h5-1.beta.hqq.vip/#/banner10todetail?id=77&platform_type=Android&uid=136001&zone_id=110100')
+);

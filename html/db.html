@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+    let database;
+    const user = {
+        username: '007',
+        firstName: 'zhang',
+        lastName: 'chenglin',
+        password: '0103'
+    }
+    const request = indexedDB.open('admin', 2);
+    request.onupgradeneeded = event => {
+        database = event.target.result;
+        const store = database.createObjectStore('users', { keyPath: 'username' });
+        store.add(user);
+    }
+</script>
+</body>
+
+</html>
