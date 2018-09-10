@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <!--<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">-->
+    <!--<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
+    <!--<script src="./node_modules/marked/marked.min.js"></script>-->
+    <script src="./node_modules/md-js/mdjs.min.js"></script>
+</head>
+<style>
+    #md, #html {
+        margin-top: 20px;
+        height: 510px;
+    }
+
+    #md {
+        resize: none;
+    }
+
+    #html {
+        border: solid 1px darkgrey;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+<!--<div class="container">-->
+    <!--<div class="row">-->
+        <!--<div class="col-sm-6 col-lg-6 col-md-6">-->
+            <!--<textarea id="md" class="form-control" placeholder="请输入Markdown代码"></textarea>-->
+        <!--</div>-->
+        <div id="html"></div>
+    <!--</div>-->
+<!--</div>-->
+</body>
+<script>
+    // var rendererMD = new marked.Renderer();
+    // marked.setOptions({
+    //     renderer: rendererMD,
+    //     gfm: true,
+    //     tables: true,
+    //     breaks: false,
+    //     pedantic: false,
+    //     sanitize: false,
+    //     smartLists: true,
+    //     smartypants: false
+    // });
+    // marked.setOptions({
+    //     highlight: function (code) {
+    //         return hljs.highlightAuto(code).value;
+    //     }
+    // });
+    // $("#md").on("keyup blur", function () {
+        $('#html').html(Mdjs.md2html('> * 整理知识，学习笔记\n' +
+            '> * 发布日记，杂文，所见所想\n' +
+            '> * 撰写发布技术文稿（代码支持）\n' +
+            '> * 撰写发布学术论文（LaTeX 公式支持）'))
+    // })
+</script>
+
+</html>

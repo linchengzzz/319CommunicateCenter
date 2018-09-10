@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function* myNumber() {
+        for (var i = 0;i < 3;i++) {
+            yield i + 2;
+        }
+    }
+    var generator = myNumber();
+    console.log(generator.next());
+    console.log(generator.next());
+    console.log(generator.close());
+    // console.log(generator.close());
+</script>
+</body>
+</html>

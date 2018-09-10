@@ -1,6 +1,7 @@
 <h2>
     My Heroes
 </h2>
+<p>Tody is {{date | date: 'shortTime'}}</p>
 <ul class="heroes">
     <li *ngFor="let hero of heroes">
         <a routerLink="/detail/{{hero.id}}">

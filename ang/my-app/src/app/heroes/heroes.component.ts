@@ -1,7 +1,6 @@
 import { HeroService } from './../hero.service';
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
-import {overrideComponentView} from '../../../node_modules/@angular/core/src/view';
 
 @Component({
     selector: 'app-heroes',
@@ -10,12 +9,18 @@ import {overrideComponentView} from '../../../node_modules/@angular/core/src/vie
 })
 export class HeroesComponent implements OnInit {
     public heroes: Hero[];
-    // 依赖注入
+    public date: object = new Date();
+    /**
+     * Creates an instance of heroes component.
+     * @param {'依赖注入'} heroService
+     */
     constructor(private heroService: HeroService) {}
     ngOnInit(): void {
         this.getHeroes();
     }
-    // 初始列表化数据
+    /**
+     * Gets heroes 初始列表化数据
+     */
     private getHeroes(): void {
         this.heroService
             .getHeroes()
